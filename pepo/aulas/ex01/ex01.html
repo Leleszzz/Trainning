@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro Exercício</title>
 </head>
+
 <body>
     <h1>Testando minhas primeiras tags (possivelmente essenciais)</h1> <!-- TAG de hierarquia de título: h1>h2>h3... -->
     <hr> <!-- TAG de linha reta -->
-    <h2>Neste arquivo .html estarei indicando as 6 primeiras tags que usarei com frequência durante o aprendizado do curso</h2>
-    <p>No intuito de uma boa vizualização e entendimento estarei deixando-as listadas, após isto estarei explicando de forma simplificada cada uma delas com sua respectiva função. Também estarei deixando registrado o comando para adição de comentários e sinal de maior/menor, que por sinal será bem útil durante o progresso do curso.</p> <!-- TAG de parágrafo -->
+    <h2>Neste arquivo .html estarei indicando as 6 primeiras tags que usarei com frequência durante o aprendizado do
+        curso</h2>
+    <p>No intuito de uma boa vizualização e entendimento estarei deixando-as listadas, após isto estarei explicando de
+        forma simplificada cada uma delas com sua respectiva função. Também estarei deixando registrado o comando para
+        adição de comentários e sinal de maior/menor, que por sinal será bem útil durante o progresso do curso.</p>
+    <!-- TAG de parágrafo -->
     <ul> <!-- TAG utilizada para a criação de listas não ordenadas -->
         <li>&lt;h&gt;</li> <!-- <li> - TAG utilizada para a a criação de items da lista(seja ela ordenada ou não) -->
         <li>&lt;hr&gt;</li>
@@ -19,19 +25,33 @@
         <li>&lt;ul&gt;</li>
     </ul>
     <h3>A 1º tag utilizada será a &lt;h&gt;</h3>
-    <p>Sua utilidade é indicar que há uma hierarquia de títulos, sendo desta forma a primeira na linhagem/prioridade. Há porém um limite nesta linhagem, podendo se estender em até 6 níveis de prioridade. Para simplificar irei demonstrar com um exemplo:</p> 
+    <p>Sua utilidade é indicar que há uma hierarquia de títulos, sendo desta forma a primeira na linhagem/prioridade. Há
+        porém um limite nesta linhagem, podendo se estender em até 6 níveis de prioridade. Para simplificar irei
+        demonstrar com um exemplo:</p>
     <p>&lt;h1&gt; &rarr; &lt;h2&gt; &rarr; &lt;h3&gt; ... &lt;h6&gt;</p>
     <h3>A 2º tag utilizada será a &lt;hr&gt;</h3>
-    <p>Basicamente esta tag é utilizada para a adição de uma listra reta abaixo do caractere digitado anteriormente. Ex:</p>
+    <p>Basicamente esta tag é utilizada para a adição de uma listra reta abaixo do caractere digitado anteriormente. Ex:
+    </p>
     <hr>
     <h3>A 3º tag utilizada será a &lt;p&gt;</h3>
-    <p>Esta tag tem como intuito a criação de parágrafos, portanto qualquer caractere, imagem ou até mesmo tag escrita dentro de seus parametros estará em formato de parágrafo. Abaixo escreverei um texto para exemplificar:</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam corrupti ducimus odit tenetur cum quia necessitatibus et. Obcaecati molestias pariatur, voluptatibus nobis corporis repellat natus minus ea voluptas ipsam nulla!</p>
+    <p>Esta tag tem como intuito a criação de parágrafos, portanto qualquer caractere, imagem ou até mesmo tag escrita
+        dentro de seus parametros estará em formato de parágrafo. Abaixo escreverei um texto para exemplificar:</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam corrupti ducimus odit tenetur cum quia
+        necessitatibus et. Obcaecati molestias pariatur, voluptatibus nobis corporis repellat natus minus ea voluptas
+        ipsam nulla!</p>
     <h3>A 4º e não menos importante tag é a &lt;ol&gt;</h3>
-    <p>Essa tag possibilita a adição de listas ordenadas, uma curiosidade sobre esta tag é que por mais que você (editor da .html) não indique que ela começará a partir do a/A/1/I,i (caractere inicial em escala alfabética minúscula/maiúscula/numérica/numérica romana maiúscula e minúscula) o arquivo se baseará no início lógico, porém é possível alterar a formatação dos caracteres compostos pela lista. Através da adição do parâmetro ''type'' é possível escolher o tipo de caractere para a ordem da lista (Mais uma vez sendo ela a primordial ou subsequente). 
-    <p>Basicamente não é necessário escrever o ponto inicial, mas é sempre bom deixar organizado e regrado o código afim de se acostumar futuramente. Uma segunda curiosidade é que é possível a criação de listas organizadas ou não dentro da lista organizada, em resume depende da sua criatividade/necessidade. Ex:</p>
-<ol type="1" start="1"> <!-- type e start são parametros de formatação de caracteres, sendo type (nesta TAG) o tipo de caractere e start o início da sequência dos próximos caracteres-->
-    <li></li>
+    <p>Essa tag possibilita a adição de listas ordenadas, uma curiosidade sobre esta tag é que por mais que você (editor
+        da .html) não indique que ela começará a partir do a/A/1/I,i (caractere inicial em escala alfabética
+        minúscula/maiúscula/numérica/numérica romana maiúscula e minúscula) o arquivo se baseará no início lógico, porém
+        é possível alterar a formatação dos caracteres compostos pela lista. Através da adição do parâmetro ''type'' é
+        possível escolher o tipo de caractere para a ordem da lista (Mais uma vez sendo ela a primordial ou
+        subsequente).
+    <p>Basicamente não é necessário escrever o ponto inicial, mas é sempre bom deixar organizado e regrado o código afim
+        de se acostumar futuramente. Uma segunda curiosidade é que é possível a criação de listas organizadas ou não
+        dentro da lista organizada, em resume depende da sua criatividade/necessidade. Ex:</p>
+    <ol type="1" start="1">
+        <!-- type e start são parametros de formatação de caracteres, sendo type (nesta TAG) o tipo de caractere e start o início da sequência dos próximos caracteres-->
+        <li></li>
         <ol type="A" start="A">
             <li></li>
             <ol type="a" start="a">
@@ -46,20 +66,25 @@
         </ol>
     </ol>
     <h3>A 5º tag é a &lt;li&gt;</h3>
-    <p>Ela faz parte da tag anterior e posterior. Em resumo ela é um dos itens que compõe a lista, podendo esta ser a lista original/subsequente ou ordenada/não ordenada. Abaixo deixarei o exemplo da tag (que não há mudança) nos dois tipos de listas.</p>
-        <ol> <!-- TAG utilizada para a criação de listas ordenadas -->
-            <li>Café da manhã</li>
-            <li>Almoço</li>
-            <li>Café da tarde</li>
-        </ol>
+    <p>Ela faz parte da tag anterior e posterior. Em resumo ela é um dos itens que compõe a lista, podendo esta ser a
+        lista original/subsequente ou ordenada/não ordenada. Abaixo deixarei o exemplo da tag (que não há mudança) nos
+        dois tipos de listas.</p>
+    <ol> <!-- TAG utilizada para a criação de listas ordenadas -->
+        <li>Café da manhã</li>
+        <li>Almoço</li>
+        <li>Café da tarde</li>
+    </ol>
     <ul>
         <li>Estudo</li>
         <li>Trabalho</li>
         <li>Lazer</li>
     </ul>
     <h3>Por fim temos a 6º tag, sendo essa a &lt;ul&gt;</h3>
-    <p>Assim como a &ltol&gt;, esta tag é capaz de criar listas, porém desta vez não ordenadas. Como antes dito, é possível a criação de listas dentro de listas, vai da necessidade, porém há um parametro que também possibilita a formatação do caractere que indica a lista. Abaixo irei demonstrar as possibilidades:</p>
-    <ul type="square"> <!-- Aqui temos o type em outra TAG, neste modelo ele exerce a função de seletor de formato geométrico da caractere-->
+    <p>Assim como a &ltol&gt;, esta tag é capaz de criar listas, porém desta vez não ordenadas. Como antes dito, é
+        possível a criação de listas dentro de listas, vai da necessidade, porém há um parametro que também possibilita
+        a formatação do caractere que indica a lista. Abaixo irei demonstrar as possibilidades:</p>
+    <ul type="square">
+        <!-- Aqui temos o type em outra TAG, neste modelo ele exerce a função de seletor de formato geométrico da caractere-->
         <li></li>
         <ul type="circle">
             <li></li>
@@ -72,4 +97,5 @@
         </ul>
     </ul>
 </body>
+
 </html>
