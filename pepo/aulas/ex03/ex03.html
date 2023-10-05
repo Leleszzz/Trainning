@@ -4,13 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Terceiro exercício</title>
+    <style>
+        h4 {
+            color: blueviolet;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
     <h1>Desenvolvendo as tags de mídia</h1>
-    <p>Neste exercício irei introduzir, desenvolver e explicar todos os detalhes e curiosidades sobre as tags <strong>ESSENCIAIS</strong> do processo de aprendizado em <abbr title="HyperText Markup">HTML5</abbr>. Tentarei também dar uma breve introdução com explicação em algumas tags/parâmetros no <abbr title="Cascading Style Sheets">CSS3</abbr>. Ao invés de listar as tags como fiz nos exercícios anteriores, deixarei de modo que se pareça com capítulos. O motivo é para demonstrar a grande importância de cada uma assim como ênfase em cada detalhe possível para que não passe despercebido. Bom, veja abaixo o que aprendi em cada tag/parâmetro:</p>
+    <p>Neste exercício irei introduzir, desenvolver e explicar todos os detalhes e curiosidades sobre as tags <strong>ESSENCIAIS</strong> do processo de aprendizado em <abbr title="HyperText Markup">HTML5</abbr>. Tentarei também dar uma breve introdução com explicação em algumas tags/parâmetros que referenciam o <abbr title="Cascading Style Sheets">CSS3</abbr>. Ao invés de listar as tags como fiz nos exercícios anteriores, deixarei de modo que se pareça com capítulos. O motivo é para demonstrar a grande importância e complexidade de cada uma, assim como ênfase em cada detalhe possível para que não passe despercebido. Bom, veja abaixo o que aprendi em cada tag/parâmetro:</p>
     <h2>A tag &lt;link&gt;</h2>
+    <p>A utilidade desta tag está relacionada a conectivo entre tags/parâmetros. Aprendi com ela duas funções: sendo uma delas o inserimento do favicon no arquivo .html. E a segunda função sendo a de criar um conectivo com o arquivo .css . Abaixo irei demonstrar como realizar o conectivo entre cada tag/parâmetro:</p>
+    <h3>Conexão entre arquivo .ico (favicon) e arquivo .html</h3>
+    <p>Para linkar o favicon ao site basta digitar os seguintes parâmetros em seu código HTML5:</p>
+    <pre>
+    <code>&lt;link rel="shortcut icon" href="arquivo que deseja linkar" type="nome ao qual deseja atribuir ao arquivo"&gt;</code>
+    </pre>
+    <p>O local de inserimento da tag pode ser em qualquer lugar, desde que esteja inserida no parâmetro &lt;head&gt; de seu arquivo .html. Veja abaixo um exemplo que evidencia melhor:</p>
+    <pre>
+    <code>&lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport"content="width=device-width, initial-scale=1.0"&gt;
+        <strong>&lt;link rel="shortcut icon" href="arquivo que deseja linkar" type="nome ao qual deseja atribuir ao arquivo"&gt;</strong>
+        &lt;title&gt;"título que deseja inserir"&lt;/title&gt;
+    &lt;/head&gt;</code>
+    </pre>
+    <p>Para que possa notar a mudança basta olhar a imagem ao lado da guia em seu navegador. Confira abaixo a imagem que exemplifica melhor:</p>
+    <img src="../imagens/print-favicon.png" alt="Exemplo de Favicon">
+    <h3>Conexão entre arquivo .html e .css</h3>
+    <p>Há somente uma forma de estabelecer um conectivo entre estes dois arquivos, porém não há somente uma forma de estabelecer conexão entre o HTML e CSS. Portanto, irei dividir em 3 partes as formas de se criar uma conexão entre ambos:</p>
+    <h3>1º forma de conexão entre HTML e CSS (Inline)</h3>
+    <p>A primeira forma de estabelecer conexão entre o HTML e CSS é bem simples (porém não eficaz). Basta adicionar o parâmetro "style", com o complemento que deseja adicionar, ao lado da tag que deseja alterar a forma. Veja abaixo um exemplo de parâmetro CSS (dentro do arquivo .html) que altera a cor da fonte dos caracteres inseridos:</p>
+    <p style="color: blueviolet;">texto que deseja transmitir</p>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;p style="color: cor de sua escolha;"&gt;texto que deseja transmitir&lt;/p&gt;</code>
+    </pre>
+    <p>Uma curiosidade sobre esta tag é que por mais que funcione normalmente e (principalmente) não seja obsoleta, comparada as outras duas formas ela é praticamente esquecida em termos de utilidade. Isso porque ela se limita em alterar somente a tag ao qual adicionou o parâmetro de estilo. Por mais que ela seja a primeira em hierarquia de leitura dos buscadores de sites (Google, YouTube, etc), sua praticidade é quase nula. Sua utilidade está mais relacionada a alteração de forma em uma coisinha ou outra, que no caso seja bem específica.</p>
+    <p>Do contrário, o autor/editor do site terá muito trabalho em ter que alterar tag por tag e parâmetro por parâmetro, sem contar que quanto mais alterações houverem no site/página, mais poluído será a visão de quem for editar ou até mesmo somente conferir o arquivo.</p>
+    <h3>2º forma de conexão entre HTML e CSS (Interna)</h3>
+    <p>A segunda forma de estabelecer uma conexão entre o HTML e CSS é quase idêntica a primeira forma. Basta eu inserir o parâmetro "style" dentro da tag &lt;head&gt;</p>
+    <p>Veja abaixo um exemplo de parâmetro CSS (dentro da tag &lt;head&gt;) que altera a fonte, cor e tamanho dos caracteres inseridos:</p>
+    <h4>texto que deseja transmitir</h4>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="shortcut icon" href="arquivo que deseja linkar" type="nome ao qual deseja atribuir ao arquivo"&gt;
+        &lt;title&gt;Título do arquivo .html&lt;/title&gt;
+        &lt;style&gt;
+            h4 {
+                color: cor que deseja selecionar nos caracteres;
+                font-family: fonte que deseja inserir nos caracteres;
+                font-size: tamanho da fonte que deseja inserir nos caracteres;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;</code>
+    </pre>
+    <p>Uma curiosidade sobre esta tag é que por mais que ela funcione e ainda sim apresente algum tipo de organização, não apresenta muita praticidade em relação a alterar tags em larga escala. Por exemplo, ao trabalhar com um cliente que possivelmente tem várias páginas (no caso, vários arquivos .html) eventualmente ele irá necessitar que mude algo em css em x tag. Imaginando este cenário ainda sim demorario um bom tempo até alterar tudo. Sem contar que a poluição visual não sumiu, apenas se deslocou para o início do arquivo html.</p>
+    <p>Porém, em relação a primeira maneira, já apresenta uma maior probabilidade de uso, pois é mais prático. Mesmo que esteja em segundo lugar na hierarquia de leitura de buscadores de sites (Google, YouTube, etc).</p>
+    <h3>3º forma de conexão entre HTML e CSS (Externa)</h3>
+    <p>A terceira e última forma de estabelecer uma conexão entre o HTML e CSS é através de um link entre os dois arquivos (.html e .css). Basta que os dois arquivos estejam na mesma pasta/subpasta.</p>
+    <p>Veja abaixo um exemplo de parâmetro CSS (dentro do arquivo .css) que altera a fonte, cor, cor de fundo e tamanho dos caracteres inseridos:</p>
+    <h5>texto que deseja transmitir</h5>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="shortcut icon" href="arquivo que deseja linkar" type="nome ao qual deseja atribuir ao arquivo"&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;title&gt;Título do arquivo .html&lt;/title&gt;</code>
+    &lt;/head&gt;
+    </pre>
+    <p>Logo:</p>
+    <pre>
+    <code>h5 {
+        background-color: rgb(18, 59, 112);
+        color: rgb(24, 185, 51);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+    }</code>
+    </pre>
+    <p>Bom, agora sim o seu arquivo .html não há poluição visual em relação a mistura de tags/parâmetros com CSS. E o melhor, desta forma é muito mais fácil fazer qualquer tipo de alteração que esteja relacionada com forma, mesmo que em larga escala. No fim, basta apenas linkar seu arquivo (.css) que ele irá se aplicar para todos outros arquivos (.html) que desejar. E como antes mencionado, esta é a forma de linkar HTML e CSS mais utilizada entre os editores, mesmo estando em último lugar na hierarquia de leitura de buscadores de sites (Google, YouTube, etc).</p>
     <h2>A tag &lt;a&gt;</h2>
+    <p>Até o presente momento consegui aprender duas utilidades para esta tag, sendo elas: conexões entre dois arquivos (podendo serem externos ou internos) e link para realizar o download de um arquivo em específico. O ponto chave sobre esta tag é que até o momento, só aprendi a realizar a conexão através de caracteres antes inseridos.
+    <p>Na tentativa de realizar uma explicação eficiente, irei dividir em 3 partes o conceito, e consequentemente, o exemplo de cada abaixo:</p></p>
+    <h3>Links internos</h3>
+    <p>Com a tag &lt;a&gt; é possível realizar uma conexão entre dois arquivos. Para este caso basta apenas ter acesso ao arquivo que deseja realizar a conexão na mesma pasta ou em uma subpasta. No exemplo abaixo irei demonstrar uma conexão entre dois arquivos .html:</p>
+    <a href="ex03b.html">Clique aqui para ter acesso ao segundo arquivo.</a>
+    <p>Essa conexão só foi possível porque inseri os seguintes parâmetros em meu arquivo .html:</p>
+    <pre>
+    <code>&lt;a href="segundo arquivo">caractere ao qual deseja relacionar com o redirecionamento&lt;/a&gt;</code>
+    </pre>
+    <p>Mas como eu realizei o redirecionamento que me retornou até o primeiro arquivo? Na verdade foi muito simples, bastou apenas eu criar a mesma tag &lt;a&gt; e colocar o arquivo principal como desejado a acessar. Veja o exemplo abaixo para que entenda:</p>
+    <pre>
+    <code>&lt;a href="primeiro arquivo">caractere ao qual deseja relacionar o redirecimento&lt;/a&gt;</code>
+    </pre>
+    <p>Porém, é possível realizar a conexão entre outros quaisquer arquivos mesmo que eles não estejam na pasta atual. Veja o exemplo abaixo (que não se diferencia muito):</p>
+    <a href="segunda pasta/ex03c.html">Clique aqui para ter acesso ao terceiro arquivo.</a>
+    <h3>Links externos</h3>
     <h2>A tag &lt;img&gt;</h2>
     <h2>A tag &lt;picture&gt;</h2>
     <h2>A tag &lt;audio&gt;</h2>
