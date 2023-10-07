@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Terceiro exercício</title>
+    <title>Exercício 03</title>
     <style>
         h4 {
             color: blueviolet;
@@ -16,6 +16,7 @@
 </head>
 <body>
     <h1>Desenvolvendo as tags de mídia</h1>
+    <hr>
     <p>Neste exercício irei introduzir, desenvolver e explicar todos os detalhes e curiosidades sobre as tags <strong>ESSENCIAIS</strong> do processo de aprendizado em <abbr title="HyperText Markup">HTML5</abbr>. Tentarei também dar uma breve introdução com explicação em algumas tags/parâmetros que referenciam o <abbr title="Cascading Style Sheets">CSS3</abbr>. Ao invés de listar as tags como fiz nos exercícios anteriores, deixarei de modo que se pareça com capítulos. O motivo é para demonstrar a grande importância e complexidade de cada uma, assim como ênfase em cada detalhe possível para que não passe despercebido. Bom, veja abaixo o que aprendi em cada tag/parâmetro:</p>
     <h2>A tag &lt;link&gt;</h2>
     <p>A utilidade desta tag está relacionada a conectivo entre tags/parâmetros. Aprendi com ela duas funções: sendo uma delas o inserimento do favicon no arquivo .html. E a segunda função sendo a de criar um conectivo com o arquivo .css . Abaixo irei demonstrar como realizar o conectivo entre cada tag/parâmetro:</p>
@@ -66,7 +67,7 @@
         &lt;/style&gt;
     &lt;/head&gt;</code>
     </pre>
-    <p>Uma curiosidade sobre esta tag é que por mais que ela funcione e ainda sim apresente algum tipo de organização, não apresenta muita praticidade em relação a alterar tags em larga escala. Por exemplo, ao trabalhar com um cliente que possivelmente tem várias páginas (no caso, vários arquivos .html) eventualmente ele irá necessitar que mude algo em css em x tag. Imaginando este cenário ainda sim demorario um bom tempo até alterar tudo. Sem contar que a poluição visual não sumiu, apenas se deslocou para o início do arquivo html.</p>
+    <p>Uma curiosidade sobre esta tag é que por mais que ela funcione, e ainda sim apresente algum tipo de organização, não apresenta muita praticidade em relação a alterar tags em larga escala. Por exemplo, ao trabalhar com um cliente que possivelmente tem várias páginas (no caso, vários arquivos .html) eventualmente ele irá necessitar que mude algo em css em x tag. Imaginando este cenário ainda sim demorario um bom tempo até alterar tudo. Sem contar que a poluição visual não sumiu, apenas se deslocou para o início do arquivo html.</p>
     <p>Porém, em relação a primeira maneira, já apresenta uma maior probabilidade de uso, pois é mais prático. Mesmo que esteja em segundo lugar na hierarquia de leitura de buscadores de sites (Google, YouTube, etc).</p>
     <h3>3º forma de conexão entre HTML e CSS (Externa)</h3>
     <p>A terceira e última forma de estabelecer uma conexão entre o HTML e CSS é através de um link entre os dois arquivos (.html e .css). Basta que os dois arquivos estejam na mesma pasta/subpasta.</p>
@@ -94,27 +95,75 @@
     <p>Bom, agora sim o seu arquivo .html não há poluição visual em relação a mistura de tags/parâmetros com CSS. E o melhor, desta forma é muito mais fácil fazer qualquer tipo de alteração que esteja relacionada com forma, mesmo que em larga escala. No fim, basta apenas linkar seu arquivo (.css) que ele irá se aplicar para todos outros arquivos (.html) que desejar. E como antes mencionado, esta é a forma de linkar HTML e CSS mais utilizada entre os editores, mesmo estando em último lugar na hierarquia de leitura de buscadores de sites (Google, YouTube, etc).</p>
     <h2>A tag &lt;a&gt;</h2>
     <p>Até o presente momento consegui aprender duas utilidades para esta tag, sendo elas: conexões entre dois arquivos (podendo serem externos ou internos) e link para realizar o download de um arquivo em específico. O ponto chave sobre esta tag é que ela tem como parâmetro padrão "href", que significa refência a hipertexto. Simplificando, só é possível linkar arquivos se tiver um texto ao qual execute e exiba o link na tela.</p>
-    <p>Uma curiosidade sobre esta tag é que também é possível adicionar um parâmetro que indique o idioma principal ao link que estará acessando, sendo este, o parâmetro "hreflang=". Veja abaixo como inserir o parâmetro e</p>
-    <p>Isso ajudará o navegador e softwares de tradução a identificar a tradução automática do conteúdo</p>
-    <p>Na tentativa de realizar uma explicação eficiente, irei dividir em 3 partes o conceito, e consequentemente, o exemplo de cada abaixo:</p>
+    <p>Uma curiosidade sobre esta tag é que também é possível adicionar um parâmetro que indique o idioma principal ao link que estará acessando, sendo este, o parâmetro "hreflang=". Veja abaixo como inserir o parâmetro em seu arquivo .html:</p>
+    <pre>
+    <code>&lt;a href="link ao qual irá ser redirecionado" hreflang="idioma principal do arquivo"&lt;/a&gt;</code>
+    </pre>
+    <p>Isso ajudará o navegador e softwares de tradução a identificar a tradução automática do conteúdo.</p>
+    <p>Na tentativa de realizar uma explicação eficiente da tag como todo, irei dividir em 3 partes o conceito, e consequentemente, o exemplo de cada.</p>
     <h3>Links internos</h3>
-    <p>Com a tag &lt;a&gt; é possível realizar uma conexão entre dois arquivos. Para este caso basta apenas ter acesso ao arquivo que deseja realizar a conexão na mesma pasta ou em uma subpasta. No exemplo abaixo irei demonstrar uma conexão entre dois arquivos .html:</p>
-    <a href="ex03b.html">Clique aqui para ter acesso ao segundo arquivo.</a>
-    <p>Essa conexão só foi possível porque inseri os seguintes parâmetros em meu arquivo .html:</p>
+    <p>Com a tag &lt;a&gt; é possível realizar uma conexão entre dois arquivos. Para este caso, basta apenas ter acesso ao arquivo que deseja realizar a conexão na mesma pasta ou em uma subpasta. No exemplo abaixo irei demonstrar uma conexão entre dois arquivos .html:</p>
+    <a href="ex03b.html" target="_self" rel="_next">Clique aqui para ter acesso ao segundo arquivo.</a>
+    <p>Sendo assim:</p>
     <pre>
     <code>&lt;a href="segundo arquivo">caractere ao qual deseja relacionar com o redirecionamento&lt;/a&gt;</code>
     </pre>
-    <p>Mas como eu realizei o redirecionamento que me retornou até o primeiro arquivo? Na verdade foi muito simples, bastou apenas eu criar a mesma tag &lt;a&gt; e colocar o arquivo principal como desejado a acessar. Veja o exemplo abaixo para que entenda:</p>
+    
+    <p>Antes de mostrar outro exemplo, irei mencionar os parâmetros que podem acompanhar a tag.</p>
     <pre>
-    <code>&lt;a href="primeiro arquivo">caractere ao qual deseja relacionar o redirecimento&lt;/a&gt;</code>
+    <code>&lt;a href="" target="" rel=""</code>
+    </pre>
+    <p>O parâmetro "target" tem a função de indicar que o link irá redirecionar o usuário para um novo arquivo através da guia atual ("_self"). Já o parâmetro "rel" tem a função de indicar se o arquivo redirecionado é o próximo ("_next") ou anterior ("_prev"). Um exemplo disso foi o próprio link que fiz antes para redirecionar o arquivo atual ao segundo deste exercício (ex03.html - ex03b.html). Confira abaixo o código que utilizei para realizar o link:</p>
+    <pre>
+    <code>&lt;a href="ex03b.html" target="_self" rel="_next"&gt;Clique aqui para ter acesso ao segundo arquivo.&lt;/a&gt;</code>
+    </pre>
+    <p>Basicamente eu criei um link de redirecionamento (na guia atual) para o segundo arquivo (próxima página). Após isso bastou eu realizar o mesmo redirecionamento (na guia atual) para o arquivo atual (página anterior). Veja abaixo o código que inseri para retornar ao primeiro arquivo:</p>
+    <pre>
+    <code>&lt;a href="ex03.html" target="_self" rel="prev"&gt;Clique aqui para retornar ao primeiro arquivo.&lt;/a&gt;</code>
     </pre>
     <p>Porém, é possível realizar a conexão entre outros quaisquer arquivos mesmo que eles não estejam na pasta atual. Veja o exemplo abaixo (que não se diferencia muito):</p>
-    <a href="segunda pasta/ex03c.html">Clique aqui para ter acesso ao terceiro arquivo.</a>
+    <a href="segunda pasta/ex03c.html" target="_self" rel="_next">Clique aqui para ter acesso ao terceiro arquivo.</a>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;a href="segunda pasta/ex03c.html" target="_self" rel="_next"&gt;Clique aqui para ter acesso ao terceiro arquivo.&lt;/a&gt;</code>
+    </pre>
+    <p>Consequentemente, o código para retorno a página atual é:</p>
+    <pre>
+    <code>&lt;a href="../ex03.html" target="_self" rel="prev"&gt;Clique aqui para retornar ao primeiro arquivo.&lt;/a&gt;</code>
+    </pre>
+    <p>A única diferença entre ambos exemplos é que: o arquivo da segunda página se encontra na mesma pasta do arquivo da página atual (principal), já o terceiro arquivo se encontra em uma sub pasta (local divergente ao do arquivo da página atual). Portanto, note que o endereçamento para conexão muda um pouco, pois agora, é necessário estabelecer uma conexão entre os dois arquivos mesmo estando em pastas diferentes. Porém em ambos exemplos houve a mesma forma de conexão, que neste caso é de forma interna.</p>
     <h3>Links externos</h3>
-    <h2>A tag &lt;img&gt;</h2>
-    <h2>A tag &lt;picture&gt;</h2>
-    <h2>A tag &lt;audio&gt;</h2>
-    <h2>A tag &lt;video&gt;</h2>
-    <h3>E desta forma, finalizo aqui com todas minhas anotações o que aprendi de HTML5 e CSS3 durante o percurso do Módulo 1 do curso. Espero ter anotado e freezado tudo de modo que não me esqueça futuramente, e principalmente que eu aprenda cada vez mais e mais com os exercícios dos próximos módulos. Até breve!</h3>
+    <p>A  diferença entre a forma interna e externa é bem pouca, isso porque a única coisa que se altera no código são os parâmetros indicadores. No entanto, assim como antes mencionado, é possível realizar a conexão de forma externa entre dois arquivos, mesmo que ambos não estejam localizados na mesma pasta. Veja abaixo um exemplo de link externo (entre dois arquivos presentes em pastas diferentes):</p>
+    <a href="segunda pasta/ex03d.html" target="_blank" rel="_external">Clique aqui para ter acesso ao quarto arquivo.</a>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;a href="segunda pasta/ex03d.html" target="_blank" rel="_external"&gt;Clique aqui para ter acesso ao quarto arquivo.&lt;/a&gt;</code>
+    </pre>
+    <p>Perceba desta vez que em "target", o parâmetro indicador é o "_blank": indicativo de que o arquivo linkado será aberto uma nova guia. Houve também uma alteração em "rel", sendo o indicador "_external": indicativo que reforça a ideia de que faz parte de algo externo, ou seja, o acesso será aberto em uma nova guia presente em um local externo. Consequentemente, a única alteração presente no retorno ao acesso á pasta atual é o endereçamento. Veja abaixo o código que indica o endereçamento deste exemplo:</p>
+    <pre>
+    <code>&lt;a href="../ex03.html" target="_blank" rel="external"&gt;Clique aqui para retornar ao primeiro arquivo.&lt;/a&gt;</code>
+    </pre>
+    <h3>Link de download</h3>
+    <p>Semelhante às formas de redirecionamento, a forma de realizar uma conexão para download também utiliza da tag &lt;a&gt;. Na verdade o próprio conceito de download faz parte de um redirecionamento, portanto, não há muita diferença na forma que utiliza-se a conexão entre a págoina e o arquivo desejado.</p>
+    <p>Observe abaixo a lista que exemplifica os links para download de dois arquivos em formato .pdf e .zip:</p>
+    <ul>
+        <li><a href="arquivos-download/ebook.pdf.pdf" download="ebook.pdf" type="application/pdf">E-book.pdf</a></li>
+        <li><a href="arquivos-download/ebook.zip.zip" download="ebook.zip" type="application/zip">E-book.zip</a></li>
+    </ul>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;ul&gt;
+        &lt;li&gt;&lt;a href="arquivos-download/ebook.pdf.pdf" download="ebook.pdf" type="application/pdf"&gt;E-book.pdf&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="arquivos-download/ebook.zip.zip" download="ebook.zip" type="application/zip"&gt;E-book.zip&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code>
+    </pre>
+    <p>Partindo agora para a explicação dos paramêtros temos os seguintes: "download" e "type".</p>
+    <p>O parâmetro "download" indica que será realizada a instalação do arquivo selecionado em uma pasta do usuário (possivelmente a Downloads), portanto, os caracteres inseridos neste parâmetro serão o nome do arquivo. Já o parâmetro "type" indica a media-type do tipo de download, que em resumo, se define em uma lista de comandos que irão indicar o tipo de arquivo que será instalado (ex: arquivo.jpg, arquivo.pdf, entre outros).</p>
+    <p>Caso tenha interesse em acessar a lista de media-types:</p>
+    <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="_external">Lista de media-types.</a>
+    <hr>
+    <h2>Observação:</h2>
+    <p>Durante o desenvolvimento deste código, percebi que o arquivo ficaria muito grande caso deixasse a explicação de todas as tags que deixei separadas. Portanto, criei uma pasta nova e deixarei o arquivo que contém a continuação deste exercício presente nela. Para ter acesso à mesma basta acessar o link abaixo: (olha ai mais um exemplo de link externo)</p>
+    <a href="terceira pasta/ex03e.html" target="_blank" rel="_external">Clique aqui para ter acesso à continuação deste exercício.</a>
 </body>
 </html>
