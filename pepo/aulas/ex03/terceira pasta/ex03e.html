@@ -12,7 +12,45 @@
     <p>Abaixo irei continuar a explicação das tags que separei. Caso tenha fechado a guia anterior por engano:</p>
     <a href="../ex03.html" target="_blank" rel="_external">Primeira página do exercício 03.</a>
     <h2>A tag &lt;img&gt;</h2>
+    <p>Em resumo, esta tag tem como função carregar uma imagem à tela do usuário. Existem diferentes tipos de arquivos quando se trata de uma imagem, sendo eles: arquivos .jpeg, .png, e .gif.</p>
+    <p>Confira abaixo o exemplo de um arquivo que irei carregar:</p>
+    <img src="../../imagens/eyes.jpg" alt="Exemplo de imagem pequena">
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;img src="../../imagens/eyes.jpg" alt="Exemplo de imagem pequena"&gt;</code>
+    </pre>
+    <p>Perceba que dentro da tag há dois parâmetros, sendo eles: "src" e "alt". O parâmetro "src" vem de search, que referência a busca de um arquivo, ou seja, o arquivo no formato de imagem que estiver neste parâmetro será inserido em seu arquivo .html. Já o parâmetro "alt" vem de alternative, que refência a palavra alternativa à imagem, caso não seja possível inserir a imagem.</p>
     <h2>A tag &lt;picture&gt;</h2>
+    <p>Esta tag também tem a função de inserir imagens na tela, porém, vem acompanha de mais parâmetros de configuração. Abaixo irei demonstrar a alteração de exibição de 3 imagens (.png), sendo elas alteradas de acordo com o tamanho da guia aberta:</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="../../imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="../../imagens/foto-m.png" type="image/png">
+        <img src="../../imagens/foto-g.png" alt="Imagem grande">
+    </picture>
+    <p>Sendo assim:</p>
+    <pre>
+    <code>&lt;picture&gt;
+        &lt;source media="(max-width: 750px)" srcset="../../imagens/foto-p.png" type="image/png"&gt;
+        &lt;source media="(max-width: 1050px)" srcset="../../imagens/foto-m.png" type="image/png"&gt;
+        &lt;img src="../../imagens/foto-g.png" alt="Imagem grande"&gt;
+    &lt;/picture&gt;</code>
+    </pre>
+    <p>Perceba que dentro da tag picture foram adicionados 3 parâmetros, sendo eles: "source media", "srcset" e "type". O parâmetro "source media" determina neste código que, se o tamanho de píxeis que a guia está exibindo for x (max), então irá carregar x imagem. Já o parâmetro "srcset" determina o arquivo em formato de imagem que será exibido se atender às normas do parâmetro "source media". Por fim, o parâmetro "type" refência ao tipo de media-type do arquivo carregado, que neste caso, é o arquivo em formato .png.</p>
+    <p>Porém, para entender o que houve nesta tag precisamos nos atentar na hierarquia que impomos que ocasionou na imagem dinâmica (3 imagens que se adaptam ao tamanho da tela). E quando menciono hierarquia, quero dizer que leitor de seu código irá partir de uma análise de cima para baixo.</p>
+    <p>Vamos lá, primeiramente foi adicionado o parâmetro:</p>
+    <pre>
+    <code>&lt;source media="(max-width: 750px)" srcset="../../imagens/foto-p.png" type="image/png"&gt;</code>
+    </pre>
+    <p>E então determinamos uma regra: o tamanho máximo da tela é de 750 píxeis, se o tamanho da tela do usuário chegar a ser menor que esta quantidade de píxeis, irá carregar a imagem pequena. Logo após isso:</p>
+    <pre>
+    <code>&lt;source media="(max-width: 1050px)" srcset="../../imagens/foto-m.png" type="image/png"&gt;</code>
+    </pre>
+    <p>Aqui, determina-se que: o tamanho máximo da tela é de 1050 píxeis, se o tamanho da tela do usuário chegar a ser menor que esta quantidade de píxeis, irá carregar a imagem média. Logo após isso:</p>
+    <pre>
+    <code>&lt;img src="../../imagens/foto-g.png" alt="Imagem grande"&gt;</code>
+    </pre>
+    <p>E por fim, determinamos que por padrão, seja carregada a imagem grande. Porém ela só será carregada caso não atenda a nenhuma das especificações mencionadas acima. E agora temos o seguinte resultado, adicionamos 3 imagens que se adaptam de acordo com o tamanho da tela do usuário, bastou apenas especificar as condições de exibição de cada imagem.</p>
+    <p>Porém, é de extrema importância freezar que, só foi possível realizar estes comandos após seguirmos uma lista de prioridades. Tenha em mente que a lista segue uma hierarquia: atender à segunda regra vem após a primeira. Portanto, tenha em mente quais serão os níveis de importância das regras que irá adicionar nas configurações.</p>
     <h2>A tag &lt;audio&gt;</h2>
     <h2>A tag &lt;video&gt;</h2>
     <h3>E desta forma, finalizo aqui com todas minhas anotações o que aprendi de HTML5 e CSS3 durante o percurso do Módulo 1 do curso. Espero ter anotado e freezado tudo de modo que não me esqueça futuramente, e principalmente que eu aprenda cada vez mais e mais com os exercícios dos próximos módulos. Até breve!</h3>
